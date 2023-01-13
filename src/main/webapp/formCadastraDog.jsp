@@ -19,7 +19,7 @@ body {
 }
 </style>
 <body>
-<form action="/dog-engenous/dogCadastrado" method="post">
+<form action="/dog-engenous/entrada" method="post">
 Nome do Doguinho: <input type="text" name="nome"/>
 </br></br></br>
 Raça do Doguinho: <input type="text" name="raca"/>
@@ -27,6 +27,7 @@ Raça do Doguinho: <input type="text" name="raca"/>
 Idade do Doguinho: <input type="text" name="idade"/>
 </br></br></br>
 <input type="submit" value="Cadastrar"/>
+<input type="hidden" value="CadastraDog" name="acao"/>
 
 
 </form>

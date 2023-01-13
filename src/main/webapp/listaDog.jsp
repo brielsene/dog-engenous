@@ -30,8 +30,8 @@ Nome: ${lista.nome }
 Raça: ${lista.raca }
 Idade: ${lista.idade }aninhos!
 ID: ${lista.id } 
-<a href="/dog-engenous/mostraCao?id=${lista.id }">Modificar</a> 
-<a href="/dog-engenous/removeDog?id=${lista.id }">Remover</a>
+<a href="/dog-engenous/entrada?acao=MostraDog&id=${lista.id }">Modificar</a> 
+<a href="/dog-engenous/entrada?acao=RemoveDog&id=${lista.id }">Remover</a>
   
 
 </ul>

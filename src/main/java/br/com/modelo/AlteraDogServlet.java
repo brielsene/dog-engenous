@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class AlteraDogServlet
  */
-@WebServlet("/alteraDog")
+//@WebServlet("/alteraDog")
 public class AlteraDogServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

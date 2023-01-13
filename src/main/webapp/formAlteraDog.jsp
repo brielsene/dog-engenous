@@ -20,7 +20,7 @@ body {
 
 <body>
 
-<form action="/dog-engenous/alteraDog" method="post">
+<form action="/dog-engenous/entrada" method="post">
 Nome do Doguinho: <input type="text" name="nome" value="${dog.nome }"/>
 </br></br></br>
 Raça do Doguinho: <input type="text" name="raca" value="${dog.raca }"/>
@@ -28,6 +28,7 @@ Raça do Doguinho: <input type="text" name="raca" value="${dog.raca }"/>
 Idade do Doguinho: <input type="text" name="idade" value="${dog.idade }"/>
 </br></br></br>
 <input type="hidden" value="${dog.id }" name="id"/>
+<input type="hidden" value="AlteraDog" name="acao"/>
 <input type="submit" value="Alterar"/>
 
 
