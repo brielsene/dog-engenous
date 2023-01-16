@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.modelo.Banco;
 import br.com.modelo.Dog;
 
-public class AlteraDog {
+public class AlteraDog implements Acao {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Integer id = Integer.valueOf(request.getParameter("id"));
 		Banco banco = new Banco();
 		
@@ -21,7 +21,7 @@ public class AlteraDog {
 		dog.setRaca(request.getParameter("raca"));
 		
 		
-		response.sendRedirect("entrada?acao=ListaDogs");
+		return"redirect:entrada?acao=ListaDogs";
 		
 	}
 

@@ -10,15 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.modelo.Banco;
 import br.com.modelo.Dog;
 
-public class MostraDog {
+public class MostraDog implements Acao {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
+	public String executa(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
 		Banco banco  = new Banco();
 		Integer id = Integer.valueOf(request.getParameter("id"));
 		Dog dog = banco.procuraDogPeloId(id);
-		RequestDispatcher rd = request.getRequestDispatcher("/formAlteraDog.jsp");
 		request.setAttribute("dog", dog);
-		rd.forward(request, response);
+		return "forward:formAlteraDog.jsp";
+		
 		
 	}
 

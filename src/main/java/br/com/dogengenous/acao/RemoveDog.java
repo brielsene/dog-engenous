@@ -8,14 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.modelo.Banco;
 
-public class RemoveDog {
+public class RemoveDog implements Acao {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
+	public String executa(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
 		Banco banco = new Banco();
 		Integer id = Integer.valueOf(request.getParameter("id"));
 		banco.removeDogPeloId(id);
 		
-		response.sendRedirect("entrada?acao=ListaDogs");
+		return"redirect:entrada?acao=ListaDogs";
 	}
 
 }

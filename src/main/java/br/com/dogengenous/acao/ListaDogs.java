@@ -11,14 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.modelo.Banco;
 import br.com.modelo.Dog;
 
-public class ListaDogs {
+public class ListaDogs implements Acao {
 	
-	public void executa (HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+	public String executa (HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 		Banco banco = new Banco();
 		List<Dog>listaDog = banco.getListaDog();
-		RequestDispatcher rd = request.getRequestDispatcher("/listaDog.jsp");
 		request.setAttribute("listaDog", listaDog);
-		rd.forward(request, response);
+		return ("forward:listaDog.jsp");
+		
 		
 	}
 
